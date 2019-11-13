@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		#tabs{
+			width: 1200px;
+			border:1px solid;
+			display:flex;
+			justify-content: space-between;
+		}
+		.tabs_box{
+			width: 500px;
+		}
+		.tabs{
+			display:flex;
+		}
+		.tabs li{
+			padding: 10px;
+			padding-left: 28px;
+			font-size: 18px;
+			background: url('xi');
+		
+		}
+		.tabs .cur {
+			color:#046fbb;
+		}
+		.contents div{
+			font-size: 14px;
+			line-height: 1.5;
+			display:none;
+		}
+		.contents .show{
+			display:block;
+		}
+	</style>
+</head>
+<body>
+	<div id="tabs">
+		<div id="tabs1" class="tabs_box">
+			<ul class="tabs">
+				<li class="cur">学院新闻</li>
+				<li>通知公告</li>
+				<li>学术动态</li>
+			</ul>
+			<div class="contents">
+				<div class="show">学新闻的内容： Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				<div>通知公告的内容： Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				<div> 学术动态的内容： Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				
+			</div>
+			
+		</div>
+		<div id="tabs2" class="tabs_box">
+			<ul class="tabs">
+				<li class="cur">公司新闻</li>
+				<li>通知公告</li>
+				<li>产品动态</li>
+			</ul>
+			<div class="contents">
+				<div class="show">xxxx的新闻的内容： Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				<div>通知xxxx的公告： Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				<div> xxxxx动态的内容</div>
+			</div>
+		</div>
+		<div id="tabs3" class="tabs_box">
+			<ul class="tabs">
+				<li class="cur">xxx新闻</li>
+				<li>通知xxx</li>
+				<li>xxx动态的内容</li>
+			</ul>
+			<div class="contents">
+				<div class="show">xxx新闻的内容： Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				<div>通知xxx的内容: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				<div>xxx动态的内容: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function tab(id) {
+			var  box=document.getElementById(id);
+			var ul=box.getElementsByClassName('tabs')[0];
+			var lis=ul.getElementsByTagName('li');
+			var div=box.getElementsByClassName('contents')[0];
+			var divs=div.getElementsByTagName('div');
+			for(var i=0;i<lis.length;i++){
+				lis[i].index=i;
+				lis[i].onclick=function(){
+					for(var i=0;i<lis.length;i++){
+						lis[i].removeAttribute('class');
+					}
+					for(var i=0;i<divs.length;i++){
+						divs[i].removeAttribute('class');
+					}
+					this.className='cur';
+					divs[this.index].className='show';
+				}
+				}
+				}
+
+				tab('tabs1');
+				tab('tabs2');
+				tab('tabs3');
+		</script>
+</body>
+</html>
